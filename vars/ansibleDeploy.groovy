@@ -41,7 +41,7 @@ def call() {
         stage('Playbook Execution') {
            
         sh """
-        ssh ubuntu@192.168.73.172 '
+        ssh jenkins@192.168.73.172 '
         cd /opt/ansible-project &&
         ansible-playbook -i ${env.INVENTORY} ${env.PLAYBOOK}
         '
